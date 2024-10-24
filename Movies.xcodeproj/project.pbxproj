@@ -13,6 +13,8 @@
 		F386795D2CCA6D90000753D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F386795C2CCA6D90000753D5 /* Assets.xcassets */; };
 		F38679602CCA6D90000753D5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F386795F2CCA6D90000753D5 /* Base */; };
 		F38679682CCA735C000753D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F38679672CCA735C000753D5 /* .gitignore */; };
+		F386796B2CCAACD6000753D5 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386796A2CCAACD6000753D5 /* CustomColor.swift */; };
+		F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386796C2CCAB5EB000753D5 /* SettingsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F386795F2CCA6D90000753D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38679612CCA6D90000753D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F38679672CCA735C000753D5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F386796A2CCAACD6000753D5 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		F386796C2CCAB5EB000753D5 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 		F38679522CCA6D8F000753D5 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				F38679692CCAACC4000753D5 /* Utilities */,
 				F38679532CCA6D8F000753D5 /* AppDelegate.swift */,
 				F38679552CCA6D8F000753D5 /* SceneDelegate.swift */,
 				F38679572CCA6D8F000753D5 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				F38679612CCA6D90000753D5 /* Info.plist */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		F38679692CCAACC4000753D5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F386796A2CCAACD6000753D5 /* CustomColor.swift */,
+				F386796C2CCAB5EB000753D5 /* SettingsManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38679582CCA6D8F000753D5 /* ViewController.swift in Sources */,
+				F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */,
 				F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */,
 				F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */,
+				F386796B2CCAACD6000753D5 /* CustomColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

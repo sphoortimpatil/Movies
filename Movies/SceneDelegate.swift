@@ -15,8 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
+        let isDarkModeEnabled = UserDefaults.standard.bool(forKey: "isDarkMode")
+        window?.overrideUserInterfaceStyle = isDarkModeEnabled ? .dark : .light
+
         let viewController = ViewController()
-        
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
