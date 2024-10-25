@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Movies
 //
-//  Created by CrewPlace Enterprise on 24/10/24.
+//  Created by Sphoorti M Patil on 24/10/24.
 //
 
 import UIKit
@@ -17,8 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let isDarkModeEnabled = UserDefaults.standard.bool(forKey: "isDarkMode")
         window?.overrideUserInterfaceStyle = isDarkModeEnabled ? .dark : .light
+        window?.backgroundColor = CustomColor.customBackgroundColor
 
-        let viewController = ViewController()
+        let viewController = CustomTabBarController()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }

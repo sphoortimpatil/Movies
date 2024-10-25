@@ -9,25 +9,37 @@
 /* Begin PBXBuildFile section */
 		F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679532CCA6D8F000753D5 /* AppDelegate.swift */; };
 		F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679552CCA6D8F000753D5 /* SceneDelegate.swift */; };
-		F38679582CCA6D8F000753D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679572CCA6D8F000753D5 /* ViewController.swift */; };
+		F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679572CCA6D8F000753D5 /* HomeViewController.swift */; };
 		F386795D2CCA6D90000753D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F386795C2CCA6D90000753D5 /* Assets.xcassets */; };
 		F38679602CCA6D90000753D5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F386795F2CCA6D90000753D5 /* Base */; };
 		F38679682CCA735C000753D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F38679672CCA735C000753D5 /* .gitignore */; };
 		F386796B2CCAACD6000753D5 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386796A2CCAACD6000753D5 /* CustomColor.swift */; };
 		F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386796C2CCAB5EB000753D5 /* SettingsManager.swift */; };
+		F38679742CCACF82000753D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679732CCACF82000753D5 /* Constants.swift */; };
+		F386797B2CCBCD68000753D5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797A2CCBCD68000753D5 /* CollectionViewController.swift */; };
+		F386797D2CCBCD99000753D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797C2CCBCD99000753D5 /* ProfileViewController.swift */; };
+		F386797F2CCBD033000753D5 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797E2CCBD033000753D5 /* CustomTabBarController.swift */; };
+		F38679822CCBEC67000753D5 /* CustomBackgroundColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679812CCBEC67000753D5 /* CustomBackgroundColorViewController.swift */; };
+		F38679872CCC0799000753D5 /* TabBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F38679502CCA6D8F000753D5 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38679532CCA6D8F000753D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38679552CCA6D8F000753D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F38679572CCA6D8F000753D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F38679572CCA6D8F000753D5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F386795C2CCA6D90000753D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F386795F2CCA6D90000753D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38679612CCA6D90000753D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F38679672CCA735C000753D5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F386796A2CCAACD6000753D5 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		F386796C2CCAB5EB000753D5 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		F38679732CCACF82000753D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F386797A2CCBCD68000753D5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F386797C2CCBCD99000753D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F386797E2CCBD033000753D5 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		F38679812CCBEC67000753D5 /* CustomBackgroundColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundColorViewController.swift; sourceTree = "<group>"; };
+		F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +73,12 @@
 		F38679522CCA6D8F000753D5 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				F38679802CCBD321000753D5 /* Models */,
+				F386796E2CCAC67A000753D5 /* View Controller */,
+				F38679882CCC33BA000753D5 /* CollectionViewCell */,
 				F38679692CCAACC4000753D5 /* Utilities */,
 				F38679532CCA6D8F000753D5 /* AppDelegate.swift */,
 				F38679552CCA6D8F000753D5 /* SceneDelegate.swift */,
-				F38679572CCA6D8F000753D5 /* ViewController.swift */,
 				F386795C2CCA6D90000753D5 /* Assets.xcassets */,
 				F386795E2CCA6D90000753D5 /* LaunchScreen.storyboard */,
 				F38679612CCA6D90000753D5 /* Info.plist */,
@@ -77,8 +91,36 @@
 			children = (
 				F386796A2CCAACD6000753D5 /* CustomColor.swift */,
 				F386796C2CCAB5EB000753D5 /* SettingsManager.swift */,
+				F38679732CCACF82000753D5 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F386796E2CCAC67A000753D5 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F386797E2CCBD033000753D5 /* CustomTabBarController.swift */,
+				F38679572CCA6D8F000753D5 /* HomeViewController.swift */,
+				F386797A2CCBCD68000753D5 /* CollectionViewController.swift */,
+				F386797C2CCBCD99000753D5 /* ProfileViewController.swift */,
+				F38679812CCBEC67000753D5 /* CustomBackgroundColorViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		F38679802CCBD321000753D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F38679882CCC33BA000753D5 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +194,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38679582CCA6D8F000753D5 /* ViewController.swift in Sources */,
+				F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */,
 				F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */,
 				F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */,
 				F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */,
+				F386797B2CCBCD68000753D5 /* CollectionViewController.swift in Sources */,
 				F386796B2CCAACD6000753D5 /* CustomColor.swift in Sources */,
+				F386797D2CCBCD99000753D5 /* ProfileViewController.swift in Sources */,
+				F38679872CCC0799000753D5 /* TabBarCollectionViewCell.swift in Sources */,
+				F38679822CCBEC67000753D5 /* CustomBackgroundColorViewController.swift in Sources */,
+				F38679742CCACF82000753D5 /* Constants.swift in Sources */,
+				F386797F2CCBD033000753D5 /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
