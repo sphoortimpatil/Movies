@@ -9,9 +9,11 @@ import Foundation
 
 class Constants {
     class Icons {
-        static let home = "house"
-        static let favourite = "star"
-        static let unsubscribe = "star.fill"
-        static let profile = "person"
+        static let home = "house.fill"
+        static let unselecteHome = "house"
+        static let tag = "tag.fill"
+        static let untag = "tag"
+        static let profile = "person.fill"
+        static let unselectedProfile = "person"
     }
 }

@@ -15,8 +15,9 @@ class CustomTabBarController: UITabBarController {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(TabBarCollectionViewCell.self, forCellWithReuseIdentifier: "tabBarCell")
+        collectionView.register(TabBarCollectionViewCell.self, forCellWithReuseIdentifier: "TabBarCell")
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = CustomColor.tabBarBackgroundColor
         return collectionView
     }()
 
@@ -26,7 +27,7 @@ class CustomTabBarController: UITabBarController {
     lazy var profileVC = ProfileViewController()
     
     enum TabBarOptions: String, CaseIterable {
-        case collection = "Colelction"
+        case collection = "Collection"
         case home = "Home"
         case profile = "Profile"
         
@@ -35,7 +36,7 @@ class CustomTabBarController: UITabBarController {
             case .home:
                 return Constants.Icons.home
             case .collection:
-                return Constants.Icons.favourite
+                return Constants.Icons.tag
             case .profile:
                 return  Constants.Icons.profile
             }
@@ -46,7 +47,7 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = CustomColor.customBackgroundColor
+        view.backgroundColor = CustomColor.backgroundColor
         changeDefaultTabBarAppearace()
         configureTabBarView()
         configureTabBarCollectionView()
@@ -54,12 +55,12 @@ class CustomTabBarController: UITabBarController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
     }
     
     private func changeDefaultTabBarAppearace() {
         super.tabBar.isTranslucent = false
-        super.tabBar.barTintColor = CustomColor.customBackgroundColor
+        super.tabBar.barTintColor = CustomColor.backgroundColor
         super.tabBar.tintColor = .label
         super.tabBar.shadowImage = UIImage()
         super.tabBar.backgroundImage = UIImage()
@@ -75,8 +76,9 @@ class CustomTabBarController: UITabBarController {
         tabBarView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         tabBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        tabBarView.backgroundColor = .white
-        tabBarView.layer.cornerRadius = 30
+        tabBarView.backgroundColor = CustomColor.tabBarBackgroundColor
+        tabBarView.clipsToBounds = true
+        tabBarView.layer.cornerRadius = 35
     }
     
     private func configureTabBarCollectionView() {
@@ -103,8 +105,16 @@ class CustomTabBarController: UITabBarController {
 
 extension CustomTabBarController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let currentSelectedIndex = TabBarOptions.allCases.firstIndex(of: currentTabSelection),
+              let currentSelectedCell = collectionView.cellForItem(at: IndexPath(item: currentSelectedIndex, section: 0)) as? TabBarCollectionViewCell,
+              let updatedSelectedCell = collectionView.cellForItem(at: indexPath) as? TabBarCollectionViewCell else {
+            return
+        }
+        currentSelectedCell.animateTabItem(isSelected: false)
+        updatedSelectedCell.animateTabItem(isSelected: true)
+
+
         let tabItem = TabBarOptions.allCases[indexPath.row]
-        
         switch tabItem {
         case .home:
             self.resetToHome()
@@ -115,7 +125,6 @@ extension CustomTabBarController: UICollectionViewDelegate {
             self.resetToHome()
             self.openVC(vc: profileVC, from: .profile)
         }
-        
     }
     
     func openVC(vc: UIViewController, from selectedOption: TabBarOptions) {
@@ -151,12 +160,11 @@ extension CustomTabBarController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = tabBarCollectionView.dequeueReusableCell(withReuseIdentifier: "tabBarCell", for: indexPath) as? TabBarCollectionViewCell else { return UICollectionViewCell(frame: .zero)}
+        guard let cell = tabBarCollectionView.dequeueReusableCell(withReuseIdentifier: "TabBarCell", for: indexPath) as? TabBarCollectionViewCell else { return UICollectionViewCell(frame: .zero)}
         let option = TabBarOptions.allCases[indexPath.row]
         cell.setTabItems(label: option.rawValue, imageName: option.imageName)
         return cell
     }
-    
 }
 
 extension CustomTabBarController: UICollectionViewDelegateFlowLayout {
@@ -165,5 +173,4 @@ extension CustomTabBarController: UICollectionViewDelegateFlowLayout {
         let itemSize = (tabBarCollectionView.frame.width - (tabBarCollectionView.contentInset.left + tabBarCollectionView.contentInset.right + 5) ) / tabItemCount
         return CGSize(width: itemSize, height: tabBarCollectionView.frame.height)
     }
-    
 }
