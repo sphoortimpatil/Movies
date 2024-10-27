@@ -12,7 +12,7 @@ class CustomBackgroundColorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = CustomColor.customBackgroundColor
+        view.backgroundColor = CustomColor.backgroundColor
     }
     
 }

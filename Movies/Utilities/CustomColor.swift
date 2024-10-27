@@ -8,8 +8,11 @@
 import UIKit
 
 enum CustomColor {
-    static let customBackgroundColor = UIColor(named: "BackgroundColor")
-    static let customButtonColor = UIColor(named: "ButtonColor")
+    static let backgroundColor = UIColor(named: "BackgroundColor")
+    static let tabBarBackgroundColor = UIColor(named: "TabBarBackgroundColor")
+    static let buttonColor = UIColor(named: "ButtonColor")
+    static let buttonContentColor =  UIColor(named: "ButtonContentColor")
+    static let titleLabelColor = UIColor(named: "TitleLabelColor")
     static let customPrimaryLabelColor = UIColor(named: "PrimaryLabelColor")
     static let customSecondaryLabelColor = UIColor(named: "SecondaryTextColor")
     static let customYellow = UIColor(named: "CustomYellow")
