@@ -19,8 +19,8 @@
 		F386797B2CCBCD68000753D5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797A2CCBCD68000753D5 /* CollectionViewController.swift */; };
 		F386797D2CCBCD99000753D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797C2CCBCD99000753D5 /* ProfileViewController.swift */; };
 		F386797F2CCBD033000753D5 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797E2CCBD033000753D5 /* CustomTabBarController.swift */; };
-		F38679822CCBEC67000753D5 /* CustomBackgroundColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679812CCBEC67000753D5 /* CustomBackgroundColorViewController.swift */; };
 		F38679872CCC0799000753D5 /* TabBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */; };
+		F386798A2CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679892CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		F386797A2CCBCD68000753D5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F386797C2CCBCD99000753D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F386797E2CCBD033000753D5 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		F38679812CCBEC67000753D5 /* CustomBackgroundColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundColorViewController.swift; sourceTree = "<group>"; };
 		F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCollectionViewCell.swift; sourceTree = "<group>"; };
+		F38679892CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundColorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 				F38679572CCA6D8F000753D5 /* HomeViewController.swift */,
 				F386797A2CCBCD68000753D5 /* CollectionViewController.swift */,
 				F386797C2CCBCD99000753D5 /* ProfileViewController.swift */,
-				F38679812CCBEC67000753D5 /* CustomBackgroundColorViewController.swift */,
+				F38679892CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -196,13 +196,13 @@
 			files = (
 				F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */,
 				F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */,
+				F386798A2CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift in Sources */,
 				F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */,
 				F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */,
 				F386797B2CCBCD68000753D5 /* CollectionViewController.swift in Sources */,
 				F386796B2CCAACD6000753D5 /* CustomColor.swift in Sources */,
 				F386797D2CCBCD99000753D5 /* ProfileViewController.swift in Sources */,
 				F38679872CCC0799000753D5 /* TabBarCollectionViewCell.swift in Sources */,
-				F38679822CCBEC67000753D5 /* CustomBackgroundColorViewController.swift in Sources */,
 				F38679742CCACF82000753D5 /* Constants.swift in Sources */,
 				F386797F2CCBD033000753D5 /* CustomTabBarController.swift in Sources */,
 			);

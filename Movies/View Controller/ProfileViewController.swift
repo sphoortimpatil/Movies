@@ -7,11 +7,10 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: CustomBackgroundColorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = CustomColor.backgroundColor
     }
 }
