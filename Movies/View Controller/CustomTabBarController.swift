@@ -163,6 +163,9 @@ extension CustomTabBarController: UICollectionViewDataSource {
         guard let cell = tabBarCollectionView.dequeueReusableCell(withReuseIdentifier: "TabBarCell", for: indexPath) as? TabBarCollectionViewCell else { return UICollectionViewCell(frame: .zero)}
         let option = TabBarOptions.allCases[indexPath.row]
         cell.setTabItems(label: option.rawValue, imageName: option.imageName)
+        if option == .home {
+            cell.animateTabItem(isSelected: true)
+        }
         return cell
     }
 }
