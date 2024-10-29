@@ -2,7 +2,7 @@
 //  HomeTransparentTableViewCell.swift
 //  Movies
 //
-//  Created by CrewPlace Enterprise on 29/10/24.
+//  Created by Sphoorti M Patil on 29/10/24.
 //
 
 import UIKit
