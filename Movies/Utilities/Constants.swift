@@ -16,4 +16,5 @@ class Constants {
         static let profile = "person.fill"
         static let unselectedProfile = "person"
     }
+    static let movieListOptionsLabel = ["Now Playing", "Popular", "Top Rated", "Upcoming"]
 }

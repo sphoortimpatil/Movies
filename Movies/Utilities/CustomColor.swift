@@ -13,7 +13,7 @@ enum CustomColor {
     static let buttonColor = UIColor(named: "ButtonColor")
     static let buttonContentColor =  UIColor(named: "ButtonContentColor")
     static let titleLabelColor = UIColor(named: "TitleLabelColor")
-    static let customPrimaryLabelColor = UIColor(named: "PrimaryLabelColor")
-    static let customSecondaryLabelColor = UIColor(named: "SecondaryTextColor")
+    static let primaryLabelColor = UIColor(named: "PrimaryLabelColor")
+    static let secondaryLabelColor = UIColor(named: "SecondaryTextColor")
     static let customYellow = UIColor(named: "CustomYellow")
 }

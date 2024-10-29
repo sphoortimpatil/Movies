@@ -20,7 +20,17 @@
 		F386797D2CCBCD99000753D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797C2CCBCD99000753D5 /* ProfileViewController.swift */; };
 		F386797F2CCBD033000753D5 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386797E2CCBD033000753D5 /* CustomTabBarController.swift */; };
 		F38679872CCC0799000753D5 /* TabBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */; };
-		F386798A2CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679892CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift */; };
+		F386798A2CCF7DEF000753D5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679892CCF7DEF000753D5 /* BaseViewController.swift */; };
+		F386798E2CCF8A96000753D5 /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386798D2CCF8A96000753D5 /* HeaderLabel.swift */; };
+		F38679922CCFA0DC000753D5 /* PersonalizedGreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679912CCFA0DC000753D5 /* PersonalizedGreetingView.swift */; };
+		F386799B2CCFA85A000753D5 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386799A2CCFA85A000753D5 /* CarouselCollectionViewCell.swift */; };
+		F386799D2CCFAAD6000753D5 /* HomeCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386799C2CCFAAD6000753D5 /* HomeCarouselTableViewCell.swift */; };
+		F386799F2CCFDA16000753D5 /* MovieOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386799E2CCFDA16000753D5 /* MovieOptionTableViewCell.swift */; };
+		F38679A12CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679A02CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift */; };
+		F38679A32CD0AFFF000753D5 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679A22CD0AFFF000753D5 /* MovieCard.swift */; };
+		F38679A52CD0C44E000753D5 /* MovieCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679A42CD0C44E000753D5 /* MovieCardTableViewCell.swift */; };
+		F38679A72CD0C58E000753D5 /* MovieCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679A62CD0C58E000753D5 /* MovieCardCollectionViewCell.swift */; };
+		F38679A92CD0E256000753D5 /* HomeTransparentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679A82CD0E256000753D5 /* HomeTransparentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +49,17 @@
 		F386797C2CCBCD99000753D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F386797E2CCBD033000753D5 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCollectionViewCell.swift; sourceTree = "<group>"; };
-		F38679892CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundColorViewController.swift; sourceTree = "<group>"; };
+		F38679892CCF7DEF000753D5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F386798D2CCF8A96000753D5 /* HeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
+		F38679912CCFA0DC000753D5 /* PersonalizedGreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizedGreetingView.swift; sourceTree = "<group>"; };
+		F386799A2CCFA85A000753D5 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		F386799C2CCFAAD6000753D5 /* HomeCarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCarouselTableViewCell.swift; sourceTree = "<group>"; };
+		F386799E2CCFDA16000753D5 /* MovieOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieOptionTableViewCell.swift; sourceTree = "<group>"; };
+		F38679A02CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListOptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		F38679A22CD0AFFF000753D5 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		F38679A42CD0C44E000753D5 /* MovieCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardTableViewCell.swift; sourceTree = "<group>"; };
+		F38679A62CD0C58E000753D5 /* MovieCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		F38679A82CD0E256000753D5 /* HomeTransparentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTransparentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +93,11 @@
 		F38679522CCA6D8F000753D5 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				F386798F2CCFA07D000753D5 /* View */,
 				F38679802CCBD321000753D5 /* Models */,
 				F386796E2CCAC67A000753D5 /* View Controller */,
 				F38679882CCC33BA000753D5 /* CollectionViewCell */,
+				F38679932CCFA4B2000753D5 /* TableViewCell */,
 				F38679692CCAACC4000753D5 /* Utilities */,
 				F38679532CCA6D8F000753D5 /* AppDelegate.swift */,
 				F38679552CCA6D8F000753D5 /* SceneDelegate.swift */,
@@ -92,6 +114,7 @@
 				F386796A2CCAACD6000753D5 /* CustomColor.swift */,
 				F386796C2CCAB5EB000753D5 /* SettingsManager.swift */,
 				F38679732CCACF82000753D5 /* Constants.swift */,
+				F386798D2CCF8A96000753D5 /* HeaderLabel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -103,7 +126,7 @@
 				F38679572CCA6D8F000753D5 /* HomeViewController.swift */,
 				F386797A2CCBCD68000753D5 /* CollectionViewController.swift */,
 				F386797C2CCBCD99000753D5 /* ProfileViewController.swift */,
-				F38679892CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift */,
+				F38679892CCF7DEF000753D5 /* BaseViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -119,8 +142,39 @@
 			isa = PBXGroup;
 			children = (
 				F38679862CCC0799000753D5 /* TabBarCollectionViewCell.swift */,
+				F386799A2CCFA85A000753D5 /* CarouselCollectionViewCell.swift */,
+				F38679A02CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift */,
+				F38679A62CD0C58E000753D5 /* MovieCardCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F386798F2CCFA07D000753D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F38679902CCFA08D000753D5 /* Home */,
+				F38679A22CD0AFFF000753D5 /* MovieCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38679902CCFA08D000753D5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F38679912CCFA0DC000753D5 /* PersonalizedGreetingView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F38679932CCFA4B2000753D5 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F38679A82CD0E256000753D5 /* HomeTransparentTableViewCell.swift */,
+				F386799C2CCFAAD6000753D5 /* HomeCarouselTableViewCell.swift */,
+				F386799E2CCFDA16000753D5 /* MovieOptionTableViewCell.swift */,
+				F38679A42CD0C44E000753D5 /* MovieCardTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +249,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */,
+				F38679A52CD0C44E000753D5 /* MovieCardTableViewCell.swift in Sources */,
+				F38679A12CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift in Sources */,
+				F38679A72CD0C58E000753D5 /* MovieCardCollectionViewCell.swift in Sources */,
+				F386798E2CCF8A96000753D5 /* HeaderLabel.swift in Sources */,
 				F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */,
-				F386798A2CCF7DEF000753D5 /* CustomBackgroundColorViewController.swift in Sources */,
+				F386798A2CCF7DEF000753D5 /* BaseViewController.swift in Sources */,
+				F386799D2CCFAAD6000753D5 /* HomeCarouselTableViewCell.swift in Sources */,
 				F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */,
 				F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */,
+				F38679A32CD0AFFF000753D5 /* MovieCard.swift in Sources */,
+				F386799F2CCFDA16000753D5 /* MovieOptionTableViewCell.swift in Sources */,
+				F38679A92CD0E256000753D5 /* HomeTransparentTableViewCell.swift in Sources */,
 				F386797B2CCBCD68000753D5 /* CollectionViewController.swift in Sources */,
+				F38679922CCFA0DC000753D5 /* PersonalizedGreetingView.swift in Sources */,
 				F386796B2CCAACD6000753D5 /* CustomColor.swift in Sources */,
+				F386799B2CCFA85A000753D5 /* CarouselCollectionViewCell.swift in Sources */,
 				F386797D2CCBCD99000753D5 /* ProfileViewController.swift in Sources */,
 				F38679872CCC0799000753D5 /* TabBarCollectionViewCell.swift in Sources */,
 				F38679742CCACF82000753D5 /* Constants.swift in Sources */,
