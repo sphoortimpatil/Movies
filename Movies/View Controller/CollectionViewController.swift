@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewController: CustomBackgroundColorViewController {
+class CollectionViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

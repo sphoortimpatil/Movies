@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: CustomBackgroundColorViewController {
+class ProfileViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

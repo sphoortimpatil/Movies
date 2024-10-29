@@ -25,7 +25,7 @@ class TabBarCollectionViewCell: UICollectionViewCell {
         let configuration = UIImage.SymbolConfiguration(weight: .light)
         let iconImage = UIImage(systemName: Constants.Icons.home, withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate)
         imageView.image = iconImage
-        imageView.tintColor  = CustomColor.customSecondaryLabelColor
+        imageView.tintColor  = CustomColor.secondaryLabelColor
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -110,7 +110,7 @@ class TabBarCollectionViewCell: UICollectionViewCell {
     private func setTabItemUnSelectAnimation() {
         self.selectedView.backgroundColor = CustomColor.tabBarBackgroundColor
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2,  options: .curveEaseIn, animations: {
-            self.tabItemImage.tintColor = CustomColor.customSecondaryLabelColor
+            self.tabItemImage.tintColor = CustomColor.secondaryLabelColor
             self.tabItemImage.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
