@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CB706992CFB403A000576BD /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB706982CFB4034000576BD /* C.swift */; };
 		5CB7069B2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB7069A2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift */; };
 		F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679532CCA6D8F000753D5 /* AppDelegate.swift */; };
 		F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679552CCA6D8F000753D5 /* SceneDelegate.swift */; };
@@ -36,7 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CB706982CFB4034000576BD /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		5CB7069A2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F38679502CCA6D8F000753D5 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38679532CCA6D8F000753D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 		5CB706972CFB402B000576BD /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				5CB706982CFB4034000576BD /* C.swift */,
 				5CB7069A2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift */,
 			);
 			path = Layout;
@@ -265,7 +262,6 @@
 				F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */,
 				F38679A52CD0C44E000753D5 /* MovieCardTableViewCell.swift in Sources */,
 				F38679A12CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift in Sources */,
-				5CB706992CFB403A000576BD /* C.swift in Sources */,
 				F38679A72CD0C58E000753D5 /* MovieCardCollectionViewCell.swift in Sources */,
 				F386798E2CCF8A96000753D5 /* HeaderLabel.swift in Sources */,
 				F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */,
