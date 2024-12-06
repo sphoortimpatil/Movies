@@ -13,8 +13,6 @@ class HomeCarouselTableViewCell: UITableViewCell {
     private let carouselCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = .zero
-        layout.minimumLineSpacing = 20
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
@@ -26,9 +24,10 @@ class HomeCarouselTableViewCell: UITableViewCell {
         collectionView.layer.shadowOffset = CGSize(width: 0, height: 4)
         collectionView.layer.shadowRadius = 18
         collectionView.layer.masksToBounds = false
+        collectionView.isPagingEnabled = true
         return collectionView
     }()
-    
+
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -68,17 +67,20 @@ class HomeCarouselTableViewCell: UITableViewCell {
         carouselView.translatesAutoresizingMaskIntoConstraints = false
         
         carouselView.topAnchor.constraint(equalTo: trendingLabel.bottomAnchor, constant: 10).isActive = true
-        carouselView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        carouselView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        carouselView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+        carouselView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
         carouselView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        carouselView.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        carouselView.heightAnchor.constraint(equalToConstant: 550).isActive = true
+        carouselView.clipsToBounds = true
     }
+    
     
     private func configureCarouselCollectionView() {
         carouselView.addSubview(carouselCollectionView)
         
+        carouselCollectionView.backgroundColor = CustomColor.backgroundColor
         carouselCollectionView.heightAnchor.constraint(equalTo: carouselView.heightAnchor, constant: 0).isActive = true
-        carouselCollectionView.widthAnchor.constraint(equalTo: carouselView.widthAnchor, multiplier:  3 / 4, constant: -25).isActive = true
+        carouselCollectionView.widthAnchor.constraint(equalTo: carouselView.widthAnchor).isActive = true
         carouselCollectionView.centerYAnchor.constraint(equalTo: carouselView.centerYAnchor).isActive = true
         carouselCollectionView.centerXAnchor.constraint(equalTo: carouselView.centerXAnchor).isActive = true
         
@@ -100,6 +102,7 @@ extension HomeCarouselTableViewCell: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let indexPath = carouselCollectionView.indexPathsForVisibleItems.first else { return }
         pageControl.currentPage = indexPath.row
+        carouselCollectionView.reloadData()
     }
 }
 
@@ -116,13 +119,18 @@ extension HomeCarouselTableViewCell: UICollectionViewDataSource {
 }
 
 extension HomeCarouselTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        15
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout , sizeForItemAt indexPath: IndexPath)->CGSize {
-        let itemWidth = (carouselCollectionView.frame.width)
-        let itemHeight = (carouselCollectionView.frame.height)
+        let itemWidth = carouselCollectionView.frame.width - 15
+        let itemHeight = carouselCollectionView.frame.height
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 25
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 7.5, bottom: 0, right: 7.5)
     }
+
 }

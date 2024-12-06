@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CB706992CFB403A000576BD /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB706982CFB4034000576BD /* C.swift */; };
+		5CB7069B2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB7069A2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift */; };
 		F38679542CCA6D8F000753D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679532CCA6D8F000753D5 /* AppDelegate.swift */; };
 		F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679552CCA6D8F000753D5 /* SceneDelegate.swift */; };
 		F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38679572CCA6D8F000753D5 /* HomeViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CB706982CFB4034000576BD /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		5CB7069A2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F38679502CCA6D8F000753D5 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38679532CCA6D8F000753D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38679552CCA6D8F000753D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CB706972CFB402B000576BD /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5CB706982CFB4034000576BD /* C.swift */,
+				5CB7069A2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		F38679472CCA6D8F000753D5 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,7 @@
 		F38679522CCA6D8F000753D5 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				5CB706972CFB402B000576BD /* Layout */,
 				F386798F2CCFA07D000753D5 /* View */,
 				F38679802CCBD321000753D5 /* Models */,
 				F386796E2CCAC67A000753D5 /* View Controller */,
@@ -251,6 +265,7 @@
 				F38679582CCA6D8F000753D5 /* HomeViewController.swift in Sources */,
 				F38679A52CD0C44E000753D5 /* MovieCardTableViewCell.swift in Sources */,
 				F38679A12CCFEFA4000753D5 /* MovieListOptionCollectionViewCell.swift in Sources */,
+				5CB706992CFB403A000576BD /* C.swift in Sources */,
 				F38679A72CD0C58E000753D5 /* MovieCardCollectionViewCell.swift in Sources */,
 				F386798E2CCF8A96000753D5 /* HeaderLabel.swift in Sources */,
 				F386796D2CCAB5EB000753D5 /* SettingsManager.swift in Sources */,
@@ -260,6 +275,7 @@
 				F38679562CCA6D8F000753D5 /* SceneDelegate.swift in Sources */,
 				F38679A32CD0AFFF000753D5 /* MovieCard.swift in Sources */,
 				F386799F2CCFDA16000753D5 /* MovieOptionTableViewCell.swift in Sources */,
+				5CB7069B2CFB405B000576BD /* CarousalCollectionViewFlowLayout.swift in Sources */,
 				F38679A92CD0E256000753D5 /* HomeTransparentTableViewCell.swift in Sources */,
 				F386797B2CCBCD68000753D5 /* CollectionViewController.swift in Sources */,
 				F38679922CCFA0DC000753D5 /* PersonalizedGreetingView.swift in Sources */,
