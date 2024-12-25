@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieListOptionCollectionViewCell: UICollectionViewCell {
+class MovieFilterTabWidgetCollectionViewCell: UICollectionViewCell {
    
     private let selectedView: UIView = {
         let view = UIView()

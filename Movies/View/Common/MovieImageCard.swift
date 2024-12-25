@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCard: UIView {
+class MovieImageCard: UIView {
     private let movieImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,12 +29,15 @@ class MovieCard: UIView {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    var height: Double = 212
-    var width: Double = 144
+    var height: CGFloat = 212
+    var width: CGFloat = 144
     private let ratingLabel = createHeaderLabel(text: "", fontSize: 14.0, textColor: CustomColor.backgroundColor ?? .black)
     
-     init(frame: CGRect, height: Double, width: Double) {
-        super.init(frame: frame)
+     init(height: CGFloat, width: CGFloat) {
+        super.init(frame: .zero)
+         
+         self.width = width
+         self.height = height
         
         configureMovieImageView()
         configureRatingView()
@@ -51,9 +54,9 @@ class MovieCard: UIView {
         
         movieImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         movieImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        movieImageView.heightAnchor.constraint(equalToConstant: height).isActive = true
+        movieImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        movieImageView.heightAnchor.constraint(equalToConstant: height - 37).isActive = true
         movieImageView.widthAnchor.constraint(equalToConstant: width).isActive = true
-       
     }
     
     private func configureRatingView() {

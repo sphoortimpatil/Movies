@@ -57,7 +57,7 @@ class HomeCarouselTableViewCell: UITableViewCell {
         contentView.addSubview(trendingLabel)
         
         trendingLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        trendingLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        trendingLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12).isActive = true
         trendingLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier:  7 / 8, constant: 0).isActive = true
         trendingLabel.textAlignment = .left
     }

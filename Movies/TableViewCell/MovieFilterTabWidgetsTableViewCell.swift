@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieOptionTableViewCell: UITableViewCell {
+class MovieFilterTabWidgetsTableViewCell: UITableViewCell {
     private let movieListOptions = Constants.movieListOptionsLabel
     private let movieOptionsLabelCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -16,7 +16,7 @@ class MovieOptionTableViewCell: UITableViewCell {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(MovieListOptionCollectionViewCell.self, forCellWithReuseIdentifier: "MovieListOptionCell")
+        collectionView.register(MovieFilterTabWidgetCollectionViewCell.self, forCellWithReuseIdentifier: "MovieListOptionCell")
         collectionView.backgroundColor = CustomColor.backgroundColor
         return collectionView
     }()
@@ -39,6 +39,7 @@ class MovieOptionTableViewCell: UITableViewCell {
         movieOptionsLabelCollectionView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         movieOptionsLabelCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
         movieOptionsLabelCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
+        movieOptionsLabelCollectionView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         movieOptionsLabelCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
         movieOptionsLabelCollectionView.dataSource = self
@@ -46,13 +47,13 @@ class MovieOptionTableViewCell: UITableViewCell {
     }
 }
 
-extension MovieOptionTableViewCell: UICollectionViewDataSource{
+extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieListOptions.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = movieOptionsLabelCollectionView.dequeueReusableCell(withReuseIdentifier: "MovieListOptionCell", for: indexPath) as? MovieListOptionCollectionViewCell else { return UICollectionViewCell(frame: .zero)}
+        guard let cell = movieOptionsLabelCollectionView.dequeueReusableCell(withReuseIdentifier: "MovieListOptionCell", for: indexPath) as? MovieFilterTabWidgetCollectionViewCell else { return UICollectionViewCell(frame: .zero)}
         cell.setTabItems(label: movieListOptions[indexPath.row])
         return cell
     }
@@ -60,7 +61,7 @@ extension MovieOptionTableViewCell: UICollectionViewDataSource{
 
 //extension MovieOptionTableViewCell: UICollectionViewDelegate {}
 
-extension MovieOptionTableViewCell: UICollectionViewDelegateFlowLayout {
+extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 30)
     }

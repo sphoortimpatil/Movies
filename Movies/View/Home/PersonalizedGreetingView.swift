@@ -7,8 +7,12 @@
 
 import UIKit
 
-class PersonalizedGreetingView: UIView {
+protocol PersonalizedGreetingViewDelegate: AnyObject {
+    func didTapSearchButton()
+}
 
+class PersonalizedGreetingView: UIView {
+    weak var delegate: PersonalizedGreetingViewDelegate?
     private let appImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,12 +29,22 @@ class PersonalizedGreetingView: UIView {
     private let greetingLabel: UILabel = createHeaderLabel(text: "Hello,", fontSize: 28, textColor: CustomColor.primaryLabelColor ?? .black)
     private let userIdentityLabel: UILabel = createHeaderLabel(text: "User", fontSize: 28, textColor: CustomColor.titleLabelColor ?? .black)
     
+    private let searchIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "Search")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         configureAppImage()
         configureGreetingLabel()
         configureUserIdentityLabel()
+        configureSearchIcon()
+        addGesturesForSearchIcon()
     }
     
     required init?(coder: NSCoder) {
@@ -58,5 +72,23 @@ class PersonalizedGreetingView: UIView {
         
         userIdentityLabel.centerYAnchor.constraint(equalTo: appImage.centerYAnchor).isActive = true
         userIdentityLabel.leadingAnchor.constraint(equalTo: greetingLabel.trailingAnchor, constant: 5).isActive = true
+    }
+    
+    private func configureSearchIcon() {
+        self.addSubview(searchIcon)
+        
+        searchIcon.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        searchIcon.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        searchIcon.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        searchIcon.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    }
+    
+    private func addGesturesForSearchIcon() {
+        searchIcon.isUserInteractionEnabled = true
+        searchIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(searchIconTapped)))
+    }
+    
+    @objc private func searchIconTapped() {
+        delegate?.didTapSearchButton()
     }
 }
