@@ -61,7 +61,7 @@ extension MovieCardTableViewCell: UICollectionViewDataSource{
     }
 }
 
-extension MovieOptionTableViewCell: UICollectionViewDelegate {}
+extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDelegate {}
 
 extension MovieCardTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -8,28 +8,29 @@
 import UIKit
 
 class MovieCardCollectionViewCell: UICollectionViewCell {
-    private let movieCard = MovieCard(frame: .zero, height: 212, width: 144)
+    private let movieImageCard = MovieImageCard(height: 250, width: 144)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configureMovieCard()
+        configureMovieImageCard()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configureMovieCard() {
-        contentView.addSubview(movieCard)
+    private func configureMovieImageCard() {
+        contentView.addSubview(movieImageCard)
+        movieImageCard.translatesAutoresizingMaskIntoConstraints = false
         
-        movieCard.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        movieCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
-        movieCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
-        movieCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        movieImageCard.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        movieImageCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
+        movieImageCard.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        movieImageCard.heightAnchor.constraint(equalToConstant: 250).isActive = true
     }
     
     func setRating(_ rating: Float) {
-        movieCard.setRating(String(rating))
+        movieImageCard.setRating(String(rating))
     }
 }

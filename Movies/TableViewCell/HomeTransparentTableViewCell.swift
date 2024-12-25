@@ -22,11 +22,13 @@ class HomeTransparentTableViewCell: UITableViewCell {
     
     private func configureTransparentView() {
         contentView.addSubview(transparentView)
+        transparentView.translatesAutoresizingMaskIntoConstraints = false
         
         transparentView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         transparentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         transparentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         transparentView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        transparentView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         transparentView.backgroundColor = .clear
     }
     

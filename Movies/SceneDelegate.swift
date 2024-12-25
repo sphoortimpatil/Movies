@@ -13,15 +13,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
+        let window = UIWindow(windowScene: windowScene)
         
         let isDarkModeEnabled = UserDefaults.standard.bool(forKey: "isDarkMode")
-        window?.overrideUserInterfaceStyle = isDarkModeEnabled ? .dark : .light
+        window.overrideUserInterfaceStyle = isDarkModeEnabled ? .dark : .light
 
 //        window?.overrideUserInterfaceStyle = .dark
-        let viewController = CustomTabBarController()
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
+        
+        let tabBarController = CustomTabBarController()
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
+        self.window = window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
