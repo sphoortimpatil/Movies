@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let isDarkModeEnabled = UserDefaults.standard.bool(forKey: "isDarkMode")
         window.overrideUserInterfaceStyle = isDarkModeEnabled ? .dark : .light
 
-//        window?.overrideUserInterfaceStyle = .dark
+//        window.overrideUserInterfaceStyle = .dark
         
         let tabBarController = CustomTabBarController()
         window.rootViewController = tabBarController

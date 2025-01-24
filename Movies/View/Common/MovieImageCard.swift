@@ -32,12 +32,15 @@ class MovieImageCard: UIView {
     var height: CGFloat = 212
     var width: CGFloat = 144
     private let ratingLabel = createHeaderLabel(text: "", fontSize: 14.0, textColor: CustomColor.backgroundColor ?? .black)
+    private var isRatingHidden: Bool = false
     
-     init(height: CGFloat, width: CGFloat) {
+     init(height: CGFloat, width: CGFloat, isRatingHidden: Bool) {
         super.init(frame: .zero)
          
+         self.isRatingHidden = isRatingHidden
          self.width = width
-         self.height = height
+         self.height = isRatingHidden ? height : height - 37
+        
         
         configureMovieImageView()
         configureRatingView()
@@ -55,8 +58,8 @@ class MovieImageCard: UIView {
         movieImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         movieImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         movieImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        movieImageView.heightAnchor.constraint(equalToConstant: height - 37).isActive = true
-        movieImageView.widthAnchor.constraint(equalToConstant: width).isActive = true
+        movieImageView.heightAnchor.constraint(equalToConstant: height).isActive = true
+//        movieImageView.widthAnchor.constraint(equalToConstant: width).isActive = true
     }
     
     private func configureRatingView() {
@@ -88,6 +91,10 @@ class MovieImageCard: UIView {
         ratingLabel.centerYAnchor.constraint(equalTo: ratingView.centerYAnchor).isActive = true
         ratingLabel.trailingAnchor.constraint(equalTo: ratingView.trailingAnchor, constant: -5).isActive = true
         ratingLabel.textAlignment = .left
+    }
+    
+    func hideRating() {
+        ratingView.isHidden = true
     }
     
     func setRating(_ rating: String) {

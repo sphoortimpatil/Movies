@@ -8,7 +8,7 @@
 import UIKit
 
 class MovieListDataTableViewCell: UITableViewCell {
-    private let movieImageCard = MovieImageCard(height: 176, width: 92)
+    private let movieImageCard = MovieImageCard(height: 176, width: 92, isRatingHidden: false)
     private let movieNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 22, weight: .semibold)
@@ -23,7 +23,8 @@ class MovieListDataTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.text = "Cheese on toast airedale the big cheese. Danish fontina cheesy grin airedale danish fontina taleggio the big cheese macaroni cheese port-salut. Edam fromage lancashire feta caerphilly. taleggio the big cheese macaroni cheese port-salut. Edam fromage lancashire feta caerphilly. taleggio the big cheese macaroni cheese port-salut. Edam fromage lancashire feta caerphilly."
         label.textAlignment = .left
-        label.textColor = UIColor(red: 106/255.0, green: 106/255.0, blue: 114/255.0, alpha: 1.0)
+//        label.textColor = UIColor(red: 106/255.0, green: 106/255.0, blue: 114/255.0, alpha: 1.0)
+        label.textColor = CustomColor.bodyLabelColor
         return label
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

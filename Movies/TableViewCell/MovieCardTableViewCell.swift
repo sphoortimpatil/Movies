@@ -7,8 +7,12 @@
 
 import UIKit
 
-class MovieCardTableViewCell: UITableViewCell {
+protocol MovieCardTableViewCellDelegate: AnyObject {
+    func didTapMovieCard()
+}
 
+class MovieCardTableViewCell: UITableViewCell {
+    weak var delegate: MovieCardTableViewCellDelegate?
     private let movieListOptions = [1.0, 2.0, 8, 9.0, 10]
     private let movieCardCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -61,11 +65,14 @@ extension MovieCardTableViewCell: UICollectionViewDataSource{
     }
 }
 
-extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDelegate {}
+extension MovieCardTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didTapMovieCard()
+    }
+}
 
 extension MovieCardTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 144, height: 260)
     }
-
 }
