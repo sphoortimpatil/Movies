@@ -77,7 +77,6 @@ class HomeViewController: BaseViewController {
         searchBar.leadingAnchor.constraint(equalTo: baseView.leadingAnchor, constant: 16).isActive = true
         searchBar.trailingAnchor.constraint(equalTo: baseView.trailingAnchor, constant: -16).isActive = true
         searchBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        searchBar.setContentCompressionResistancePriority(.required, for: .vertical)
         searchBar.isHidden = true
         searchBar.transform = CGAffineTransform(scaleX: 0.01, y: 1.0)
     }
@@ -208,14 +207,44 @@ extension HomeViewController: UITableViewDataSource {
                 case 2:
                     guard let cell = homeTableView.dequeueReusableCell(withIdentifier: "MovieOptionCell", for: indexPath) as? MovieFilterTabWidgetsTableViewCell else { return UITableViewCell(frame: .zero) }
                     cell.selectionStyle = .none
+                    cell.delegate = self
                     return cell
                 case 3:
                     guard let cell = homeTableView.dequeueReusableCell(withIdentifier: "MovieCardCell", for: indexPath) as? MovieCardTableViewCell else { return UITableViewCell(frame: .zero) }
                     cell.selectionStyle = .none
+                    cell.delegate = self
                     return cell
                 default:
                     return UITableViewCell(frame: .zero)
             }
         }
+    }
+}
+
+extension HomeViewController: MovieFilterTabWidgetsTableViewCellDelegate {
+    func didSelectTabWidgetOption(index: Int) {
+//        switch index {
+//            case 0:
+//                foodData = Constants.reorderFoodImageList
+//            case 1:
+//                foodData = Constants.favouriteFoodImageList
+//            case 2:
+//                foodData = Constants.topRatedFoodImageList
+//            default:
+//                foodData = []
+//        }
+        print(index, "tabSelection index")
+        let indexPath = IndexPath(row: 0, section: 3)
+        
+        if indexPath.section < homeTableView.numberOfSections {
+            homeTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
+}
+
+extension HomeViewController: MovieCardTableViewCellDelegate {
+    func didTapMovieCard() {
+        let movieDetailVC = MovieDetailsViewController()
+        navigationController?.pushViewController(movieDetailVC, animated: true)
     }
 }

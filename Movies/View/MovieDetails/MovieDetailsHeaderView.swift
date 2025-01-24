@@ -16,7 +16,7 @@ class MovieDetailsHeaderView: UIView {
         label.text = "Rogue One Part Two: The Tale of Fire and Ice: Part 3, John Snow"
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
-        label.textColor = CustomColor.titleLabelColor
+        label.textColor = CustomColor.customPurple
         return label
     }()
     
@@ -35,6 +35,7 @@ class MovieDetailsHeaderView: UIView {
         label.numberOfLines = 1
         label.text = "8.4"
         label.textAlignment = .left
+        label.textColor = CustomColor.secondaryLabelColor
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         return label
     }()
@@ -54,6 +55,7 @@ class MovieDetailsHeaderView: UIView {
         label.numberOfLines = 1
         label.text = "Action, SciFi"
         label.textAlignment = .left
+        label.textColor = CustomColor.secondaryLabelColor
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return label
     }()
@@ -65,6 +67,7 @@ class MovieDetailsHeaderView: UIView {
         label.text = "English"
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = CustomColor.secondaryLabelColor
         return label
     }()
     private let seperatorLabel: UILabel = {
@@ -73,6 +76,7 @@ class MovieDetailsHeaderView: UIView {
         label.numberOfLines = 1
         label.text = "|"
         label.textAlignment = .center
+        label.textColor = CustomColor.secondaryLabelColor
         label.font = UIFont.systemFont(ofSize: 22, weight: .thin)
         return label
     }()
@@ -106,8 +110,9 @@ class MovieDetailsHeaderView: UIView {
         
         starIconImageView.topAnchor.constraint(equalTo: movieNameLabel.bottomAnchor, constant: 10).isActive = true
         starIconImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        starIconImageView.heightAnchor.constraint(equalToConstant: 22).isActive = true
+//        starIconImageView.heightAnchor.constraint(equalToConstant: 22).isActive = true
         starIconImageView.widthAnchor.constraint(equalToConstant: 22).isActive = true
+        starIconImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
     private func configureRatingLabel() {
@@ -115,7 +120,7 @@ class MovieDetailsHeaderView: UIView {
         
         ratinglabel.topAnchor.constraint(equalTo: movieNameLabel.bottomAnchor, constant: 10).isActive = true
         ratinglabel.leadingAnchor.constraint(equalTo: starIconImageView.trailingAnchor, constant: 10).isActive = true
-        
+        ratinglabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
     private func configureCollectionIconImageView() {
@@ -123,8 +128,9 @@ class MovieDetailsHeaderView: UIView {
         
         collectionIconImageView.topAnchor.constraint(equalTo: movieNameLabel.bottomAnchor, constant: 10).isActive = true
         collectionIconImageView.leadingAnchor.constraint(equalTo: ratinglabel.trailingAnchor, constant: 10).isActive = true
-        collectionIconImageView.heightAnchor.constraint(equalToConstant: 23).isActive = true
+
         collectionIconImageView.widthAnchor.constraint(equalToConstant: 22).isActive = true
+        collectionIconImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
     private func configureMpaRatingLabel() {
@@ -132,7 +138,7 @@ class MovieDetailsHeaderView: UIView {
         
         mpaRatingLabel.centerYAnchor.constraint(equalTo: ratinglabel.centerYAnchor, constant: 0).isActive = true
         mpaRatingLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        
+        mpaRatingLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
     private func configureSeperatorLabel() {
@@ -140,6 +146,7 @@ class MovieDetailsHeaderView: UIView {
         
         seperatorLabel.firstBaselineAnchor.constraint(equalTo: mpaRatingLabel.firstBaselineAnchor).isActive = true
         seperatorLabel.trailingAnchor.constraint(equalTo: mpaRatingLabel.leadingAnchor, constant: -5).isActive = true
+        seperatorLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
     private func configureLanguageLabel() {
@@ -147,6 +154,6 @@ class MovieDetailsHeaderView: UIView {
         
         languageLabel.centerYAnchor.constraint(equalTo: ratinglabel.centerYAnchor, constant: 0).isActive = true
         languageLabel.trailingAnchor.constraint(equalTo: seperatorLabel.leadingAnchor, constant: -5).isActive = true
+        languageLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
-    
 }

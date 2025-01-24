@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeCarouselTableViewCell: UITableViewCell {
-    private let trendingLabel: UILabel = createHeaderLabel(text: "Buzzing", fontSize: 20, textColor: CustomColor.primaryLabelColor ?? .white)
+    private let trendingLabel: UILabel = createHeaderLabel(text: "In the buzz", fontSize: 20, textColor: CustomColor.primaryLabelColor ?? .white)
     private let carouselView = UIView()
     private let carouselCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

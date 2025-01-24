@@ -26,7 +26,7 @@ class AppSearchBar: UIView {
     private let searchBarView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = CustomColor.secondaryBackgroundColor
         view.layer.borderColor = UIColor(red: 174/255, green: 174/255, blue: 178/255, alpha: 0.5).cgColor
         view.layer.borderWidth = 1.0
         view.layer.cornerRadius = 8
@@ -53,7 +53,7 @@ class AppSearchBar: UIView {
         textField.placeholder = "Search"
         textField.backgroundColor = .clear
         textField.borderStyle = .none
-        textField.tintColor = CustomColor.titleLabelColor
+        textField.tintColor = CustomColor.customPurple
         textField.font = .systemFont(ofSize: 16)
         
         textField.autocorrectionType = .no
@@ -75,7 +75,7 @@ class AppSearchBar: UIView {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancel", for: .normal)
-        button.setTitleColor(CustomColor.titleLabelColor, for: .normal)
+        button.setTitleColor(CustomColor.customPurple, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16)
         button.isUserInteractionEnabled = true
         button.backgroundColor = .clear

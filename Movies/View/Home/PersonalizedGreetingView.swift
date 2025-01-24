@@ -27,7 +27,7 @@ class PersonalizedGreetingView: UIView {
     }()
     
     private let greetingLabel: UILabel = createHeaderLabel(text: "Hello,", fontSize: 28, textColor: CustomColor.primaryLabelColor ?? .black)
-    private let userIdentityLabel: UILabel = createHeaderLabel(text: "User", fontSize: 28, textColor: CustomColor.titleLabelColor ?? .black)
+    private let userIdentityLabel: UILabel = createHeaderLabel(text: "User", fontSize: 28, textColor: CustomColor.customPurple ?? .black)
     
     private let searchIcon: UIImageView = {
         let imageView = UIImageView()

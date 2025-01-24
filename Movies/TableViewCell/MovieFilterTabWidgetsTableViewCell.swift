@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MovieFilterTabWidgetsTableViewCellDelegate: AnyObject {
+    func didSelectTabWidgetOption(index: Int)
+}
+
 class MovieFilterTabWidgetsTableViewCell: UITableViewCell {
+    weak var delegate: MovieFilterTabWidgetsTableViewCellDelegate?
+    private var selectedIndex: Int = 0
     private let movieListOptions = Constants.movieListOptionsLabel
     private let movieOptionsLabelCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -55,11 +61,30 @@ extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = movieOptionsLabelCollectionView.dequeueReusableCell(withReuseIdentifier: "MovieListOptionCell", for: indexPath) as? MovieFilterTabWidgetCollectionViewCell else { return UICollectionViewCell(frame: .zero)}
         cell.setTabItems(label: movieListOptions[indexPath.row])
+        if indexPath.row == 0 {
+            delegate?.didSelectTabWidgetOption(index: 0)
+            cell.updateSelected(true)
+        }
         return cell
     }
 }
 
-//extension MovieOptionTableViewCell: UICollectionViewDelegate {}
+extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedIndex != indexPath.row {
+            let previousIndexPath = IndexPath(row: selectedIndex, section: 0)
+            if let previousCell = collectionView.cellForItem(at: previousIndexPath) as? MovieFilterTabWidgetCollectionViewCell {
+                previousCell.updateSelected(false)
+            }
+            
+            selectedIndex = indexPath.row
+            if let newTabSelectionCell = collectionView.cellForItem(at: indexPath) as? MovieFilterTabWidgetCollectionViewCell {
+                delegate?.didSelectTabWidgetOption(index: selectedIndex)
+                newTabSelectionCell.updateSelected(true)
+            }
+        }
+    }
+}
 
 extension MovieFilterTabWidgetsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

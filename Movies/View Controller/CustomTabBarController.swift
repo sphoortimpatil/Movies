@@ -127,29 +127,44 @@ extension CustomTabBarController: UICollectionViewDelegate {
         }
     }
     
+//    func openVC(vc: UIViewController, from selectedOption: TabBarOptions) {
+//        if currentTabSelection == selectedOption {
+//            return
+//        }
+//        let vc = vc
+//        homeVC.addChild(vc)
+//        homeVC.view.addSubview(vc.view)
+//        vc.view.frame = view.frame
+//        vc.didMove(toParent: homeVC)
+//        currentTabSelection = selectedOption
+//    }
+//    
+//    func resetToHome() {
+//        switch currentTabSelection {
+//        case .collection:
+//            collectionVC.view.removeFromSuperview()
+//            collectionVC.didMove(toParent: nil)
+//        case .home:
+//            return
+//        case .profile:
+//            profileVC.view.removeFromSuperview()
+//            profileVC.didMove(toParent: nil)
+//        }
+//        currentTabSelection = .home
+//    }
     func openVC(vc: UIViewController, from selectedOption: TabBarOptions) {
+        guard let navVC = navVC else { return }
+        
         if currentTabSelection == selectedOption {
             return
         }
-        let vc = vc
-        homeVC.addChild(vc)
-        homeVC.view.addSubview(vc.view)
-        vc.view.frame = view.frame
-        vc.didMove(toParent: homeVC)
+        
+        navVC.viewControllers = [vc]
         currentTabSelection = selectedOption
     }
     
     func resetToHome() {
-        switch currentTabSelection {
-        case .collection:
-            collectionVC.view.removeFromSuperview()
-            collectionVC.didMove(toParent: nil)
-        case .home:
-            return
-        case .profile:
-            profileVC.view.removeFromSuperview()
-            profileVC.didMove(toParent: nil)
-        }
+        navVC?.viewControllers = [homeVC]
         currentTabSelection = .home
     }
 }
